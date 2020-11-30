@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @room.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
+
+<div id="videos" data-controller="vonage"
+     data-vonage-token="<%= @token %>"
+     data-vonage-api-key="<%= Rails.application.credentials.vonage_api_key %>"
+     data-vonage-session-id="<%= @room.vonage_session_id %>"
+     data-vonage-name="<%= current_user.username %>">
+</div>

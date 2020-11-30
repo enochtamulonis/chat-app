@@ -1,0 +1,16 @@
+<div class="form-size flex flex-col items-center">
+  <h2 class="text-lg text-center">Leafy Trees is an alternative photo and positivity sharing platform for vegans and
+    plant based food enthusiasts. You can post your favorite recipes or share amazing meals, and find inspiration from
+    other like minded people.
+  </h2>
+  <div class="w-full h-full flex flex-col justify-around">
+    <div class="flex flex-col items-center justify-center">
+      <h2 class="text-2xl">Interested?</h2>
+      <div class="flex justify-center text-xl text-center">
+        <h4> You can <%= link_to "Sign up", new_user_registration_path, :class => "text-green-900 underline" %> for free and start posting or if you have an account
+             <%= link_to "Sign In", new_user_session_path, :class => "text-gray-900 underline" %>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>

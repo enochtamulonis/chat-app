@@ -1,0 +1,65 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.body-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.top-space {
+  height: 2em;
+  width: 100%;
+}
+
+.post-container {
+  height: 30em;
+  width: 40em;
+  overflow-y: scroll;
+  margin-bottom: 5vh;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.post-container::-webkit-scrollbar {
+  display: none;
+}
+
+.time-posted {
+  max-width: 5vw;
+}
+
+.card-size {
+  width: 38em;
+  height: 38em;
+}
+
+/* FORM STYLING START*/
+.form-container {
+  height: 25em;
+}
+
+.form-size {
+  height: 20em;
+  width: 40em;
+}
+
+.file-field-size {
+  height: 5em;
+  width: 100%;
+}
+
+
+.form-control {
+  height: 2em;
+  width: 20em;
+  border-radius: 6px;
+  padding-left: 8px;
+}
+
+.field {
+  margin-bottom: 0.4vh;
+}
+
+
+/* FORM STYLING END*/

@@ -1,0 +1,14 @@
+<div class="min-h-screen w-full flex flex-col items-center">
+
+  <div class="form-container flex flex-col items-center justify-center">
+    <% if current_user %>
+      <%= render "form", post: @post %>
+    <% else %>
+      <%= render "banner" %>
+    <% end %>
+  </div>
+
+  <div id="timeline" class="w-full h-full">
+    <%= render partial: 'post', collection: @posts %>
+  </div>
+</div>

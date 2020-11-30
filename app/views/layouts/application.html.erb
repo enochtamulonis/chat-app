@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fast Chat</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="bg-gray-300">
+    <div class="body-container">
+      <div class="top-space">
+
+      </div>
+      <%= render 'layouts/alerts' %>
+      <%= render 'layouts/navbar' %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

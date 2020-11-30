@@ -1,0 +1,29 @@
+<div class="form-size">
+  <%= form_with(model: post, local: true) do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+          <% post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :say_something, :class => "text-lg mb-2" %>
+      <%= form.text_field :body, :class => "w-full rounded pl-2 h-10 text-lg bg-transparent border-2 border-black rounded hover:bg-green-400 transition-all duration-1000 focus:bg-transparent "%>
+    </div>
+
+    <div class="field">
+      <%= form.label :vegan_food_pic, :class => "text-lg my-2" %>
+      <%= form.file_field :photo, :class => "file-field-size bg-transparent hover:bg-green-400 pl-2 pt-5 border-2 border-black rounded mb-2 transition-all duration-500 focus:bg-transparent", :type => "file", :accept => "image/*" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit :class => "px-4 py-1 border-2 border-green-400 bg-transparent rounded text-xl hover:bg-green-400 hover:border-black transition-all duration-500 cursor-pointer focus:bg-transparent" %>
+    </div>
+  <% end %>
+</div>
